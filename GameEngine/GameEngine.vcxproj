@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{18C2036B-166B-4076-8D5D-0728D8EEE6E7}</ProjectGuid>
+    <RootNamespace>GameEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>$(ProjectDir)\engine\glm\include;$(ProjectDir)\engine\glfw\include;$(ProjectDir)\engine\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(ProjectDir)\engine\glfw\lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\engine\glm\include;$(ProjectDir)\engine\glfw\include;$(ProjectDir)\engine\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(ProjectDir)\engine\glfw\lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\engine\glm\include;$(ProjectDir)\engine\glfw\include;$(ProjectDir)\engine\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)\engine\glfw\lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)\engine\glm\include;$(ProjectDir)\engine\glfw\include;$(ProjectDir)\engine\glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>Default</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)\engine\glfw\lib-vc2019;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="editor\Dialog.cpp" />
+    <ClCompile Include="editor\dialogs\ComponentViewers\SpriteViewer.cpp" />
+    <ClCompile Include="editor\dialogs\ComponentViewers\TransformViewer.cpp" />
+    <ClCompile Include="editor\dialogs\FileExplorer.cpp" />
+    <ClCompile Include="editor\dialogs\ObjectInspector.cpp" />
+    <ClCompile Include="editor\dialogs\SceneViewer.cpp" />
+    <ClCompile Include="editor\dialogs\TopBar.cpp" />
+    <ClCompile Include="editor\EditorWindow.cpp" />
+    <ClCompile Include="editor\ExtraWindows\ShortStringWindow.cpp" />
+    <ClCompile Include="editor\ExtraWindows\SpriteShowcaseWindow.cpp" />
+    <ClCompile Include="editor\UIclasses\UIComboBox.cpp" />
+    <ClCompile Include="editor\UIclasses\UIListBox.cpp" />
+    <ClCompile Include="editor\UIclasses\TreeViewer.cpp" />
+    <ClCompile Include="editor\UIclasses\UISliderBar.cpp" />
+    <ClCompile Include="engine\Camera.cpp" />
+    <ClCompile Include="engine\Engine.cpp" />
+    <ClCompile Include="engine\EngineThread.cpp" />
+    <ClCompile Include="engine\GameObject\Components\ComponentSprite.cpp" />
+    <ClCompile Include="engine\GameObject\GameObject.cpp" />
+    <ClCompile Include="engine\glad\include\glad\glad.c" />
+    <ClCompile Include="engine\Graphics.cpp" />
+    <ClCompile Include="engine\Input.cpp" />
+    <ClCompile Include="engine\ResLoaders\ShaderLoader.cpp" />
+    <ClCompile Include="engine\ResLoaders\TexLoader.cpp" />
+    <ClCompile Include="engine\Resources.cpp" />
+    <ClCompile Include="engine\Resources\Texture.cpp" />
+    <ClCompile Include="engine\Scene.cpp" />
+    <ClCompile Include="engine\scripting\EngineAPI.cpp" />
+    <ClCompile Include="engine\scripting\Scripting.cpp" />
+    <ClCompile Include="engine\stb\stb.cpp" />
+    <ClCompile Include="engine\TimeManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MessageManager.cpp" />
+    <ClCompile Include="TaskRunner.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="editor\Dialog.h" />
+    <ClInclude Include="editor\dialogs\ComponentViewers\ComponentViewer.h" />
+    <ClInclude Include="editor\dialogs\ComponentViewers\SpriteViewer.h" />
+    <ClInclude Include="editor\dialogs\ComponentViewers\TransformViewer.h" />
+    <ClInclude Include="editor\dialogs\FileExplorer.h" />
+    <ClInclude Include="editor\dialogs\ObjectInspector.h" />
+    <ClInclude Include="editor\dialogs\SceneViewer.h" />
+    <ClInclude Include="editor\dialogs\TopBar.h" />
+    <ClInclude Include="editor\EditorWindow.h" />
+    <ClInclude Include="editor\ExtraWindows\ShortStringWindow.h" />
+    <ClInclude Include="editor\ExtraWindows\SpriteShowcaseWindow.h" />
+    <ClInclude Include="editor\UIclasses\UIComboBox.h" />
+    <ClInclude Include="editor\UIclasses\UIListBox.h" />
+    <ClInclude Include="editor\UIclasses\TreeViewer.h" />
+    <ClInclude Include="editor\UIclasses\UISliderBar.h" />
+    <ClInclude Include="engine\Camera.h" />
+    <ClInclude Include="engine\Engine.h" />
+    <ClInclude Include="engine\EngineThread.h" />
+    <ClInclude Include="engine\GameObject\Components\ComponentSprite.h" />
+    <ClInclude Include="engine\GameObject\GameObject.h" />
+    <ClInclude Include="engine\glad\include\glad\glad.h" />
+    <ClInclude Include="engine\glad\include\glad\khrplatform.h" />
+    <ClInclude Include="engine\glfw\include\GLFW\glfw3.h" />
+    <ClInclude Include="engine\glfw\include\GLFW\glfw3native.h" />
+    <ClInclude Include="engine\Graphics.h" />
+    <ClInclude Include="engine\Input.h" />
+    <ClInclude Include="engine\rapidjson\allocators.h" />
+    <ClInclude Include="engine\rapidjson\document.h" />
+    <ClInclude Include="engine\rapidjson\encodedstream.h" />
+    <ClInclude Include="engine\rapidjson\encodings.h" />
+    <ClInclude Include="engine\rapidjson\filereadstream.h" />
+    <ClInclude Include="engine\rapidjson\filewritestream.h" />
+    <ClInclude Include="engine\rapidjson\fwd.h" />
+    <ClInclude Include="engine\rapidjson\istreamwrapper.h" />
+    <ClInclude Include="engine\rapidjson\memorybuffer.h" />
+    <ClInclude Include="engine\rapidjson\memorystream.h" />
+    <ClInclude Include="engine\rapidjson\ostreamwrapper.h" />
+    <ClInclude Include="engine\rapidjson\pointer.h" />
+    <ClInclude Include="engine\rapidjson\prettywriter.h" />
+    <ClInclude Include="engine\rapidjson\rapidjson.h" />
+    <ClInclude Include="engine\rapidjson\reader.h" />
+    <ClInclude Include="engine\rapidjson\schema.h" />
+    <ClInclude Include="engine\rapidjson\stream.h" />
+    <ClInclude Include="engine\rapidjson\stringbuffer.h" />
+    <ClInclude Include="engine\rapidjson\writer.h" />
+    <ClInclude Include="engine\ResLoaders\ShaderLoader.h" />
+    <ClInclude Include="engine\ResLoaders\TexLoader.h" />
+    <ClInclude Include="engine\Resources.h" />
+    <ClInclude Include="engine\Resources\Resource.h" />
+    <ClInclude Include="engine\Resources\Texture.h" />
+    <ClInclude Include="engine\Scene.h" />
+    <ClInclude Include="engine\scripting\EngineAPI.h" />
+    <ClInclude Include="engine\scripting\Scripting.h" />
+    <ClInclude Include="engine\stb\stb_image.h" />
+    <ClInclude Include="engine\stb\stb_image_write.h" />
+    <ClInclude Include="engine\TimeManager.h" />
+    <ClInclude Include="Globals.h" />
+    <ClInclude Include="MessageManager.h" />
+    <ClInclude Include="Messages.h" />
+    <ClInclude Include="TaskRunner.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="engine\Assets\default.glsl" />
+    <None Include="engine\Assets\default_vertex.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

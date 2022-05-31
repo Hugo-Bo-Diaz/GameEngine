@@ -1,0 +1,41 @@
+TO DO:
+//GRAPHICS
+-one draw call for tile map(at least one for layer)
+-one draw call for texture (glDrawInstanced)
+-one draw call for particle emmitter(glDrawInstanced)
+
+//SCENE
+-fix camera
+-add tags to game objects
+-comunication system to and from engine
+
+//EDITOR
+-everything
+
+
+
+ORDER:
+
+1-keyboard controls
+2-set current scene editing file
+3-coordinate engine and editor to add components
+4-comunicate better to the user (set focus)
+
+4-Scripting?
+
+	1- (one) 1 lua state
+	2-object interaction with lua (set global?)
+	3-object tags (get object?) (as lua tables?) (lua -> c++ -> lua)
+
+
+
+0  1  2  3  4
+5  6  7  8  9
+10 11 12 13 14
+15 16 17 18 19
+
+
+3  4  -> top_left
+8  9  -> top_right
+13 14 -> bottom_right
+18 19 -> bottom_left
